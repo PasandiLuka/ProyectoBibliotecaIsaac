@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "UvIfcvI31z8sPIHijuWxJNrUCU3fGP4NB4xQ0zsLrI8=",
+  "Source": "ProyectoBiblioteca",
+  "BasePath": "_content/ProyectoBiblioteca",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ProyectoBiblioteca/wwwroot",
+      "Source": "ProyectoBiblioteca",
+      "ContentRoot": "/home/et12alumno/ProyectoBiblioteca/wwwroot/",
+      "BasePath": "_content/ProyectoBiblioteca",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/et12alumno/ProyectoBiblioteca/wwwroot/css/bootstrap.css",
+      "SourceId": "ProyectoBiblioteca",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/et12alumno/ProyectoBiblioteca/wwwroot/",
+      "BasePath": "_content/ProyectoBiblioteca",
+      "RelativePath": "css/bootstrap.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/bootstrap.css"
+    }
+  ]
+}

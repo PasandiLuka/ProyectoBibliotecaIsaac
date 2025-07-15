@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "ManifestType": "Build",
+  "Endpoints": [
+    {
+      "Route": "css/menu.css",
+      "AssetFile": "css/menu.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "188"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LSvM90iTQ3o9e1eRi20SgDYxW3sUSb9836vJbGLXsfc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 22:57:34 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LSvM90iTQ3o9e1eRi20SgDYxW3sUSb9836vJbGLXsfc="
+        }
+      ]
+    },
+    {
+      "Route": "css/menu.xfnqe1cwze.css",
+      "AssetFile": "css/menu.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "188"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LSvM90iTQ3o9e1eRi20SgDYxW3sUSb9836vJbGLXsfc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 22:57:34 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xfnqe1cwze"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LSvM90iTQ3o9e1eRi20SgDYxW3sUSb9836vJbGLXsfc="
+        },
+        {
+          "Name": "label",
+          "Value": "css/menu.css"
+        }
+      ]
+    }
+  ]
+}

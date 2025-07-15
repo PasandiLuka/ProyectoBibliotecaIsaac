@@ -1,0 +1,28 @@
+@page "/"
+@namespace ProyectoBiblioteca.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mi sitio Blazor</title>
+    <base href="~/" />
+    <link href="css/menu.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+<body>
+    <app>
+        <component type="typeof(App)" render-mode="ServerPrerendered" />
+    </app>
+
+    <script src="_framework/blazor.server.js"></script>
+
+    
+
+</body>
+</html>
