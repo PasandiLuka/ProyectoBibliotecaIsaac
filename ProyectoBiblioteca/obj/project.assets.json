@@ -2353,19 +2353,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Luka\\.nuget\\packages\\": {}
+    "/home/et12alumno/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luka\\Desktop\\ProyectoBibliotecaIsaac\\ProyectoBiblioteca\\ProyectoBiblioteca.csproj",
+      "projectUniqueName": "/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/ProyectoBiblioteca.csproj",
       "projectName": "ProyectoBiblioteca",
-      "projectPath": "C:\\Users\\Luka\\Desktop\\ProyectoBibliotecaIsaac\\ProyectoBiblioteca\\ProyectoBiblioteca.csproj",
-      "packagesPath": "C:\\Users\\Luka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luka\\Desktop\\ProyectoBibliotecaIsaac\\ProyectoBiblioteca\\obj\\",
+      "projectPath": "/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/ProyectoBiblioteca.csproj",
+      "packagesPath": "/home/et12alumno/.nuget/packages/",
+      "outputPath": "/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Luka\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/et12alumno/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2383,13 +2383,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -2419,24 +2413,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2445,7 +2421,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.115/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

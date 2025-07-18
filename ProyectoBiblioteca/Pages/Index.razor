@@ -34,27 +34,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Bienvenido a Blazor</h1>
+        <h1 class="title">Bienvenidos a su Biblioteca de Netflix.</h1>
+        <h2 class="custom-text">Libros que ustede posee:</h2>
 
-    <p>Esta es la página de inicio servida dinámicamente con Razor (.razor).</p>
-    <p>Esta es la fecha fecha-hora actuales: @DateTime.Now</p>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Título</th>
-                <th>Genero</th>
-                <th>Autor</th>
-                <th>Editorial</th>
-                <th>FechaCreación</th>
-                <th>Paginas</th>
-                <th>Calificación</th>
+    <table class="table table-margin">
+        <thead class="custom-padding-table">
+            <tr class="table-secondary custom-padding-table">
+                <th class="custom-text-size">Título</th>
+                <th class="custom-text-size">Genero</th>
+                <th class="custom-text-size">Autor</th>
+                <th class="custom-text-size">Editorial</th>
+                <th class="custom-text-size">FechaCreación</th>
+                <th class="custom-text-size">Paginas</th>
+                <th class="custom-text-size">Calificación</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="custom-padding-table">
             @foreach (var list in Listas)
             {
-                <tr>
+                <tr class="table-dark custom-padding-table">
                     <td>@list.l.titulo</td>
                     <td>@list.g.genero</td>
                     <td>@list.l.autor</td>
@@ -66,6 +64,6 @@
             }
         </tbody>
     </table>
-    
+    <br><br>
 </body>
 </html>

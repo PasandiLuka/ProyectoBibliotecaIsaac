@@ -1,0 +1,65 @@
+.nav-item.custom-padding {
+    
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.collapse.navbar-collapse.custom-align{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.nav-item.logout {
+    margin-left: auto;
+}
+.nav-link.custom-font{
+    font-weight: bold;
+    font-size:large
+}
+.mt-auto.custom-align{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(223, 105, 25);
+}
+.custom-text{
+    font-weight: bold;
+    padding-bottom: 2rem;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    padding-top: 2rem;
+}
+.nav-link.btn.btn-danger{
+    background-color: rgb(160, 26, 26);
+    border-radius: 0.3cm;
+    text-decoration: none;
+}
+.nav-link.btn.btn-danger:hover{
+    background-color: rgb(121, 29, 29);
+}
+.text-decoration-none{
+    text-decoration: none;
+}
+.custom-text.weight{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0.8cm;
+    padding-bottom: 0;
+
+}
+.button-align{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.btn.btn-light.custom-button{
+    border-radius: 0.3cm;
+}
+.title.custom-title-padding-bottom{
+    padding-bottom: 2rem;
+}

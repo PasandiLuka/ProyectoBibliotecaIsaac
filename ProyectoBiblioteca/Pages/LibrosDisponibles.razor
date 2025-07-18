@@ -23,24 +23,24 @@
                   join g in db.Generos on l.idGenero equals g.idGenero
                   select new {l, g}).ToList();
 } 
-
-<table class="table">
-        <thead>
-            <tr>
-                <th>Título</th>
-                <th>Genero</th>
-                <th>Autor</th>
-                <th>Editorial</th>
-                <th>FechaCreación</th>
-                <th>Paginas</th>
-                <th>Calificación</th>
+<h1 class="title">Titulos de Nuestra Biblioteca</h1>
+<h2 class="custom-text">Listado de estos:</h2>
+<table class="table table-margin">
+        <thead class="custom-padding-table">
+            <tr class="table-secondary custom-padding-table">
+                <th class="custom-text-size">Título</th>
+                <th class="custom-text-size">Genero</th>
+                <th class="custom-text-size">Autor</th>
+                <th class="custom-text-size">Editorial</th>
+                <th class="custom-text-size">FechaCreación</th>
+                <th class="custom-text-size">Paginas</th>
+                <th class="custom-text-size">Calificación</th>
             </tr>
         </thead>
-        <tbody>
-
+        <tbody class="custom-padding-table">
             @foreach (var list in Listas)
             {
-                <tr>
+                <tr class="table-dark custom-padding-table">
                     <td>@list.l.titulo</td>
                     <td>@list.g.genero</td>
                     <td>@list.l.autor</td>
@@ -51,11 +51,13 @@
                 </tr>                 
             }
         </tbody>
-</table>
+    </table>
 
 <div>
-    <p>Quieres crear un nuevo libro</p>
-    <button class="btn btn-primary" @onclick="CrearLibro">Crear un libro</button>
+    <p class="custom-text weight">Quieres crear un nuevo libro</p>
+    <div class=" button-align">
+        <button class="btn btn-light custom-button" @onclick="CrearLibro">Crear un libro</button>
+    </div>
     <br><br><br><br>
 </div>
 

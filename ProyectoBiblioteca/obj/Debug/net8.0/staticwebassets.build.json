@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "U31BhJC7VRX89faUDTSGnsX6z850NjLo04maOG0EGBc=",
+  "Hash": "pL5uRuOZXuwimRV/9lW5QdMcPSDKjbIUUJjWBVPvwbg=",
   "Source": "ProyectoBiblioteca",
   "BasePath": "_content/ProyectoBiblioteca",
   "Mode": "Default",
@@ -8,118 +8,51 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "ProyectoBiblioteca\\wwwroot",
+      "Name": "ProyectoBiblioteca/wwwroot",
       "Source": "ProyectoBiblioteca",
-      "ContentRoot": "C:\\Users\\Luka\\Desktop\\ProyectoBibliotecaIsaac\\ProyectoBiblioteca\\wwwroot\\",
+      "ContentRoot": "/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
       "BasePath": "_content/ProyectoBiblioteca",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Luka\\Desktop\\ProyectoBibliotecaIsaac\\ProyectoBiblioteca\\wwwroot\\css\\bootstrap.css",
+      "Identity": "/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/css/bootstrap.css",
       "SourceId": "ProyectoBiblioteca",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Luka\\Desktop\\ProyectoBibliotecaIsaac\\ProyectoBiblioteca\\wwwroot\\",
+      "ContentRoot": "/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
       "BasePath": "_content/ProyectoBiblioteca",
-      "RelativePath": "css/bootstrap#[.{fingerprint}]?.css",
+      "RelativePath": "css/bootstrap.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "39ppvq0aet",
-      "Integrity": "6Qw+GdV+x7bmqJuz2oZkL2qApKK9D5wfTd21j+Ibud0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
-    }
-  ],
-  "Endpoints": [
-    {
-      "Route": "css/bootstrap.39ppvq0aet.css",
-      "AssetFile": "C:\\Users\\Luka\\Desktop\\ProyectoBibliotecaIsaac\\ProyectoBiblioteca\\wwwroot\\css\\bootstrap.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "280850"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6Qw+GdV+x7bmqJuz2oZkL2qApKK9D5wfTd21j+Ibud0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 23:48:10 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "39ppvq0aet"
-        },
-        {
-          "Name": "label",
-          "Value": "css/bootstrap.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-6Qw+GdV+x7bmqJuz2oZkL2qApKK9D5wfTd21j+Ibud0="
-        }
-      ]
+      "OriginalItemSpec": "wwwroot/css/bootstrap.css"
     },
     {
-      "Route": "css/bootstrap.css",
-      "AssetFile": "C:\\Users\\Luka\\Desktop\\ProyectoBibliotecaIsaac\\ProyectoBiblioteca\\wwwroot\\css\\bootstrap.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "280850"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6Qw+GdV+x7bmqJuz2oZkL2qApKK9D5wfTd21j+Ibud0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 23:48:10 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-6Qw+GdV+x7bmqJuz2oZkL2qApKK9D5wfTd21j+Ibud0="
-        }
-      ]
+      "Identity": "/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/css/main.css",
+      "SourceId": "ProyectoBiblioteca",
+      "SourceType": "Discovered",
+      "ContentRoot": "/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
+      "BasePath": "_content/ProyectoBiblioteca",
+      "RelativePath": "css/main.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/main.css"
     }
   ]
 }

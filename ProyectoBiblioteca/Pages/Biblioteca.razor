@@ -34,14 +34,14 @@
                     .ToList();
 } 
 
-<h2>Agregar Libro</h2>
+<h1 class="title custom-title-padding-bottom">Libros</h1>
 
 <EditForm EditContext="@editContext" OnValidSubmit="Guardar">
     <DataAnnotationsValidator />
 
-    <table class="table">
-        <thead>
-            <tr>
+    <table class="table table-margin">
+        <thead class="custom-padding-table">
+            <tr class="table-secondary custom-padding-table">
                 <th>Título</th>
                 <th>Genero</th>
                 <th>Autor</th>
@@ -58,8 +58,8 @@
             {
                 bool isChecked = seleccionadosMap.ContainsKey(list.l.idLibro) && seleccionadosMap[list.l.idLibro];
 
-                <tr>
-                    <td>@list.l.titulo</td>
+                <tr class="table-dark custom-padding-table">
+                    <td >@list.l.titulo</td>
                     <td>@list.g.genero</td>
                     <td>@list.l.autor</td>
                     <td>@list.l.editorial</td>
