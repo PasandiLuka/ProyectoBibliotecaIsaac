@@ -1,15 +1,20 @@
 @inherits LayoutComponentBase
-
+@inject LoginState ls
 <div class="layout">
     <header>
-        <NavMenu />
+        @if(ls.UsuarioActual != null)
+        {
+            <NavMenu />
+        }
+        
     </header>
 
     <main>
+        
         @Body
     </main>
 
     <footer class="bg-primary text-center text-light">
-        <p>&copy; 2025 - Lukita's app</p>
+        <p>&copy; 2025 - Lukita's and Sebita's app</p>
     </footer>
 </div>

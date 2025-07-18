@@ -1,23 +1,27 @@
 {
   "Files": [
     {
-      "Id": "/home/et12alumno/ProyectoBiblioteca/wwwroot/css/bootstrap.css",
-      "PackagePath": "staticwebassets/css/bootstrap.css"
+      "Id": "C:\\Users\\Luka\\Desktop\\ProyectoBibliotecaIsaac\\ProyectoBiblioteca\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.ProyectoBiblioteca.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ProyectoBiblioteca.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ProyectoBiblioteca.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.ProyectoBiblioteca.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ProyectoBiblioteca.props",
       "PackagePath": "build\\ProyectoBiblioteca.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.ProyectoBiblioteca.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ProyectoBiblioteca.props",
       "PackagePath": "buildMultiTargeting\\ProyectoBiblioteca.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.ProyectoBiblioteca.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ProyectoBiblioteca.props",
       "PackagePath": "buildTransitive\\ProyectoBiblioteca.props"
     }
   ],

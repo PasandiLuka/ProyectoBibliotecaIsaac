@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UvIfcvI31z8sPIHijuWxJNrUCU3fGP4NB4xQ0zsLrI8=",
+  "Hash": "U31BhJC7VRX89faUDTSGnsX6z850NjLo04maOG0EGBc=",
   "Source": "ProyectoBiblioteca",
   "BasePath": "_content/ProyectoBiblioteca",
   "Mode": "Default",
@@ -8,32 +8,118 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "ProyectoBiblioteca/wwwroot",
+      "Name": "ProyectoBiblioteca\\wwwroot",
       "Source": "ProyectoBiblioteca",
-      "ContentRoot": "/home/et12alumno/ProyectoBiblioteca/wwwroot/",
+      "ContentRoot": "C:\\Users\\Luka\\Desktop\\ProyectoBibliotecaIsaac\\ProyectoBiblioteca\\wwwroot\\",
       "BasePath": "_content/ProyectoBiblioteca",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/home/et12alumno/ProyectoBiblioteca/wwwroot/css/bootstrap.css",
+      "Identity": "C:\\Users\\Luka\\Desktop\\ProyectoBibliotecaIsaac\\ProyectoBiblioteca\\wwwroot\\css\\bootstrap.css",
       "SourceId": "ProyectoBiblioteca",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/et12alumno/ProyectoBiblioteca/wwwroot/",
+      "ContentRoot": "C:\\Users\\Luka\\Desktop\\ProyectoBibliotecaIsaac\\ProyectoBiblioteca\\wwwroot\\",
       "BasePath": "_content/ProyectoBiblioteca",
-      "RelativePath": "css/bootstrap.css",
+      "RelativePath": "css/bootstrap#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "39ppvq0aet",
+      "Integrity": "6Qw+GdV+x7bmqJuz2oZkL2qApKK9D5wfTd21j+Ibud0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/bootstrap.css"
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/bootstrap.39ppvq0aet.css",
+      "AssetFile": "C:\\Users\\Luka\\Desktop\\ProyectoBibliotecaIsaac\\ProyectoBiblioteca\\wwwroot\\css\\bootstrap.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "280850"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6Qw+GdV+x7bmqJuz2oZkL2qApKK9D5wfTd21j+Ibud0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Jul 2025 23:48:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "39ppvq0aet"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrap.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6Qw+GdV+x7bmqJuz2oZkL2qApKK9D5wfTd21j+Ibud0="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap.css",
+      "AssetFile": "C:\\Users\\Luka\\Desktop\\ProyectoBibliotecaIsaac\\ProyectoBiblioteca\\wwwroot\\css\\bootstrap.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "280850"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6Qw+GdV+x7bmqJuz2oZkL2qApKK9D5wfTd21j+Ibud0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Jul 2025 23:48:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6Qw+GdV+x7bmqJuz2oZkL2qApKK9D5wfTd21j+Ibud0="
+        }
+      ]
     }
   ]
 }

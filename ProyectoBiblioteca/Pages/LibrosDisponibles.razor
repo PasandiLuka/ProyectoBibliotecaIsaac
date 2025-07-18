@@ -1,0 +1,68 @@
+@page "/disponibles"
+
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Threading.Tasks;
+
+@using Microsoft.Extensions.Configuration;
+@using Microsoft.EntityFrameworkCore;
+@using ProyectoBiblioteca.Data
+@using ProyectoBiblioteca.Data.Configs
+@using ProyectoBiblioteca.Models
+
+@inject NavigationManager NavigationManager
+
+@inject IDbContextFactory<ProyectoBibliotecaDbContext> DbFactory
+@*using var db = DbFactory.CreateDbContext();
+*@
+
+@{
+    using var db = DbFactory.CreateDbContext();
+    var Listas = (from l in db.Libros 
+                  join g in db.Generos on l.idGenero equals g.idGenero
+                  select new {l, g}).ToList();
+} 
+
+<table class="table">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Genero</th>
+                <th>Autor</th>
+                <th>Editorial</th>
+                <th>FechaCreación</th>
+                <th>Paginas</th>
+                <th>Calificación</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var list in Listas)
+            {
+                <tr>
+                    <td>@list.l.titulo</td>
+                    <td>@list.g.genero</td>
+                    <td>@list.l.autor</td>
+                    <td>@list.l.editorial</td>
+                    <td>@list.l.fechaCreacion</td>
+                    <td>@list.l.cantidadPaginas</td>
+                    <td>@list.l.calificacionPromedio</td>        
+                </tr>                 
+            }
+        </tbody>
+</table>
+
+<div>
+    <p>Quieres crear un nuevo libro</p>
+    <button class="btn btn-primary" @onclick="CrearLibro">Crear un libro</button>
+    <br><br><br><br>
+</div>
+
+
+@code{
+    public void CrearLibro()
+    {
+        NavigationManager.NavigateTo("/libro");
+    }
+}

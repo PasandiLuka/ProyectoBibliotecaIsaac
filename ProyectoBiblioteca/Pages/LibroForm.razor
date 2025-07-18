@@ -1,0 +1,74 @@
+@page "/libro"
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Threading.Tasks;
+
+@using Microsoft.Extensions.Configuration;
+@using Microsoft.EntityFrameworkCore;
+@using ProyectoBiblioteca.Data
+@using ProyectoBiblioteca.Data.Configs
+@using ProyectoBiblioteca.Models
+@using ProyectoBiblioteca.FormLogic
+
+@namespace ProyectoBiblioteca.Pages
+@inherits LibroFormBase
+
+@inject IDbContextFactory<ProyectoBibliotecaDbContext> DbFactory
+@*using var db = DbFactory.CreateDbContext();
+*@
+@{
+    using var db = DbFactory.CreateDbContext();
+    var Lista = (from g in db.Generos
+                  select g).ToList();
+} 
+
+<h2>Crear Libro</h2>
+
+<EditForm EditContext="@editContext" OnValidSubmit="Guardar">
+    <DataAnnotationsValidator />
+
+    <div>
+        <label>Titulo:</label>
+        <InputText @bind-Value="libro.titulo" class="form-control" placeholder="Titulo del libro"/>
+        <ValidationMessage For="@(() => libro.titulo)" />
+    </div>
+
+    <div>
+        <label>Género:</label>
+        <InputSelect @bind-Value="libro.idGenero">
+            <option value="">-- Elige uno --</option>
+            @foreach (var g in Lista)
+            {
+                <option value="@g.idGenero">@g.genero</option>
+            }
+        </InputSelect>
+        <ValidationMessage For="@(() => libro.idGenero)" />
+    </div>
+
+    <div>
+        <label>Editorial:</label>
+        <InputText @bind-Value="libro.editorial" class="form-control" placeholder="Editorial del libro"/>
+        <ValidationMessage For="@(() => libro.editorial)" />
+    </div>
+
+    <div>
+        <label>Editorial:</label>
+        <InputText @bind-Value="libro.editorial" class="form-control" placeholder="Editorial del libro"/>
+        <ValidationMessage For="@(() => libro.editorial)" />
+    </div>
+
+    <div>
+        <label>Autor:</label>
+        <InputText @bind-Value="libro.autor" class="form-control" placeholder="Autor del libro"/>
+        <ValidationMessage For="@(() => libro.autor)" />
+    </div>
+
+    <div>
+        <label>Cantidad Páginas:</label>
+        <InputNumber TValue="int" @bind-Value="libro.cantidadPaginas" class="form-control" placeholder="Cantidad de paginas del libro"/>
+        <ValidationMessage For="@(() => libro.cantidadPaginas)" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Registrar</button>
+</EditForm>

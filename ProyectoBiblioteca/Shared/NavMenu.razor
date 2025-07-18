@@ -1,19 +1,34 @@
+@inject LoginState ls
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand"<NavLink href="/" Match="NavLinkMatch.All">Netflix de Libros</NavLink></a>
+  <a class="navbar-brand"<NavLink href="/index" Match="NavLinkMatch.All">Netflix de Libros</NavLink></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" <NavLink href="/" Match="NavLinkMatch.All">Inicio</NavLink></a>
+        <a class="nav-link" <NavLink href="/index" Match="NavLinkMatch.All">Inicio</NavLink></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"<NavLink href="/hola">Inputs</NavLink></a>
+        <a class="nav-link" <NavLink href="/disponibles">Libros Disponibles</NavLink></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" <NavLink href="/usuario">Usuario</NavLink></a>
+        <a class="nav-link"<NavLink href="/biblioteca">Adquirir Libro</NavLink></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"<NavLink href="/genero">Crear Genero</NavLink></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" <NavLink href="/"><button class="nav-link" @onclick="CloseSesion">Cerrar Sesión</button></NavLink></a>
       </li>
     </ul>
   </div>
 </nav>
+
+@code{
+  public void CloseSesion()
+  {
+    ls.SetValor(null);
+  }
+}

@@ -1,0 +1,23 @@
+@page "/genero"
+
+@namespace ProyectoBiblioteca.Pages
+@inherits GeneroFormBase
+
+<h2>Crear Genero</h2>
+
+<EditForm EditContext="@editContext" OnValidSubmit="Guardar">
+    <DataAnnotationsValidator />
+
+    <div>
+        <label>Nombre Genero:</label>
+        <InputText @bind-Value="genero.genero" class="form-control" />
+        <ValidationMessage For="@(() => genero.genero)" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Registrar</button>
+</EditForm>
+
+@if (!string.IsNullOrWhiteSpace(mensaje))
+{
+    <p class="text-success mt-3">@mensaje</p>
+}

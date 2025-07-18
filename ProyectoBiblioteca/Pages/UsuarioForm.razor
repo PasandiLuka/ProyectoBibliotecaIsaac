@@ -1,53 +1,46 @@
 @page "/usuario"
+@using ProyectoBiblioteca.FormLogic
 @namespace ProyectoBiblioteca.Pages
 @inherits UsuarioFormBase
 
-<h3>Registro de Usuario</h3>
+<h2>Registro de Usuario</h2>
 
 <EditForm EditContext="@editContext" OnValidSubmit="Guardar">
     <DataAnnotationsValidator />
 
-
     <div>
         <label>Nombre completo:</label>
-        <InputText @bind-Value="usuario.nombreCompleto" class="form-control" />
+        <InputText @bind-Value="usuario.nombreCompleto" class="form-control" placeholder="Nombre Completo"/>
         <ValidationMessage For="@(() => usuario.nombreCompleto)" />
     </div>
 
     <div>
         <label>Nombre de usuario:</label>
-        <InputText @bind-Value="usuario.nombreUsuario" class="form-control" placeholder="Nombre de usuario"/>
+        <InputText @bind-Value="usuario.nombreUsuario" class="form-control" placeholder="Nombre de Usuario"/>
         <ValidationMessage For="@(() => usuario.nombreUsuario)" />
     </div>
 
     <div>
         <label>Correo electrónico:</label>
-        <InputText @bind-Value="usuario.correo" class="form-control" />
+        <InputText @bind-Value="usuario.correo" class="form-control" placeholder="Correo Electronico"/>
         <ValidationMessage For="@(() => usuario.correo)" />
     </div>
 
     <div>
         <label>Contraseña:</label>
-        <InputText @bind-Value="usuario.contrasena" type="password" class="form-control" />
+        <InputText @bind-Value="usuario.contrasena" type="password" class="form-control" placeholder="Contraseña"/>
         <ValidationMessage For="@(() => usuario.contrasena)" />
     </div>
 
     <div>
         <label>Teléfono:</label>
-        <InputText @bind-Value="usuario.numeroTelefono" class="form-control" />
+        <InputText @bind-Value="usuario.numeroTelefono" class="form-control" placeholder="Numero de Teléfono"/>
         <ValidationMessage For="@(() => usuario.numeroTelefono)" />
-    </div>
-
-    <div>
-        <label>Dinero disponible:</label>
-        <InputNumber @bind-Value="usuario.dinero" class="form-control" />
-        <ValidationMessage For="@(() => usuario.dinero)" />
     </div>
 
     <button type="submit" class="btn btn-primary mt-3">Registrar</button>
 </EditForm>
 
-@if (!string.IsNullOrWhiteSpace(mensaje))
-{
-    <p class="text-success mt-3">@mensaje</p>
-}
+
+<br>
+<a href="/" class="btn btn-primary mt-3">Volver al Inicio</a>

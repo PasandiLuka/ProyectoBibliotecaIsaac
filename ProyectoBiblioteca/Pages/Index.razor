@@ -1,4 +1,30 @@
-@page "/"
+@page "/index"
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Threading.Tasks;
+
+@using Microsoft.Extensions.Configuration;
+@using Microsoft.EntityFrameworkCore;
+@using ProyectoBiblioteca.Data
+@using ProyectoBiblioteca.Data.Configs
+@using ProyectoBiblioteca.Models
+
+@inject LoginState ls
+
+@inject IDbContextFactory<ProyectoBibliotecaDbContext> DbFactory
+@*using var db = DbFactory.CreateDbContext();
+*@
+
+@{
+    using var db = DbFactory.CreateDbContext();
+    var Listas = (from l in db.Libros 
+                  join b in db.Bibliotecas on l.idLibro equals b.idLibro 
+                  join g in db.Generos on l.idGenero equals g.idGenero 
+                  join u in db.Usuarios on b.idUsuario equals u.idUsuario
+                  where u.idUsuario == ls.UsuarioActual
+                  select new {l, g}).ToList();
+} 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,8 +37,35 @@
     <h1>Bienvenido a Blazor</h1>
 
     <p>Esta es la página de inicio servida dinámicamente con Razor (.razor).</p>
-    <p>Esta es la fecha actual: @DateTime.Now</p>
-    <p>Podés visitar el <a href="/contador">contador interactivo</a>.</p>
+    <p>Esta es la fecha fecha-hora actuales: @DateTime.Now</p>
 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Genero</th>
+                <th>Autor</th>
+                <th>Editorial</th>
+                <th>FechaCreación</th>
+                <th>Paginas</th>
+                <th>Calificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var list in Listas)
+            {
+                <tr>
+                    <td>@list.l.titulo</td>
+                    <td>@list.g.genero</td>
+                    <td>@list.l.autor</td>
+                    <td>@list.l.editorial</td>
+                    <td>@list.l.fechaCreacion</td>
+                    <td>@list.l.cantidadPaginas</td>
+                    <td>@list.l.calificacionPromedio</td>        
+                </tr>                 
+            }
+        </tbody>
+    </table>
+    
 </body>
 </html>

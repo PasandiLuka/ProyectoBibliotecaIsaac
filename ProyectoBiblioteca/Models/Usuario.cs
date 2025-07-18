@@ -9,15 +9,15 @@ namespace ProyectoBiblioteca.Models // Cambiá WebBase por tu espacio de nombres
     {
 
         [Key]
-        public int idUsuario { get; set; }
+        public int? idUsuario { get; set; }
 
         [Required(ErrorMessage = "El nombre completo es obligatorio.")]
-        [StringLength(100, ErrorMessage = "Máximo 100 caracteres.")]
+        [StringLength(45)]
         public string nombreCompleto { get; set; } = string.Empty;
 
         
         [Required(ErrorMessage = "El nombre de usuario es obligatorio.")]
-        [StringLength(50)]
+        [StringLength(45)]
         public string nombreUsuario { get; set; } = string.Empty;
 
 
@@ -27,20 +27,19 @@ namespace ProyectoBiblioteca.Models // Cambiá WebBase por tu espacio de nombres
 
 
         [Required(ErrorMessage = "La contraseña es obligatoria.")]
-        [StringLength(100, MinimumLength = 6, ErrorMessage = "Debe tener al menos 6 caracteres.")]
+        [StringLength(45, MinimumLength = 6, ErrorMessage = "Debe tener al menos 6 caracteres.")]
         public string contrasena { get; set; } = string.Empty;
 
 
         [Phone(ErrorMessage = "Número de teléfono inválido.")]
-        [StringLength(20)]
+        [StringLength(45)]
         public string numeroTelefono { get; set; } = string.Empty;
+        
+
+        public ICollection<Calificacion> calificaciones { get; set; }
 
 
-        [Range(0, double.MaxValue, ErrorMessage = "El dinero no puede ser negativo.")]
-        public decimal dinero { get; set; }
-
-
-        public Usuario() {}
+        public Usuario() { }
 
     }
 }
