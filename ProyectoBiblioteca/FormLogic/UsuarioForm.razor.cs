@@ -18,7 +18,6 @@ public class UsuarioFormBase : ComponentBase
 
     protected override void OnInitialized()
     {
-        using var db = DbFactory.CreateDbContext();
 
         editContext = new EditContext(usuario);
         var store = new ValidationMessageStore(editContext);
@@ -26,6 +25,9 @@ public class UsuarioFormBase : ComponentBase
         editContext.OnValidationRequested += (s, e) =>
         {
             store.Clear();
+
+            using var db = DbFactory.CreateDbContext();
+            
             if (db.Usuarios.Any(u => u.nombreUsuario == usuario.nombreUsuario))
                 store.Add(() => usuario.nombreUsuario, "El nombre de usuario ya existe.");
             editContext.NotifyValidationStateChanged();
@@ -46,6 +48,7 @@ public class UsuarioFormBase : ComponentBase
 
         db.Usuarios.Add(usuario);
         await db.SaveChangesAsync();
+
         usuario = new Usuario();
         await OnInitializedAsync();
         NavigationManager.NavigateTo("/");

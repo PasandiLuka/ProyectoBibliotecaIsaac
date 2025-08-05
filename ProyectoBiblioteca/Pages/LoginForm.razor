@@ -5,35 +5,39 @@
 @inherits LoginFormBase
 @inject NavigationManager NavigationManager
 
-<h2 class="text-center">Login Usuario</h2>
+<div class="login-container">
+    <div class="login-box">
+        <h2 class="text-center">Login Usuario</h2>
 
-<EditForm EditContext="@editContext" OnValidSubmit="HandleLogin">
-    <DataAnnotationsValidator />
+        <EditForm EditContext="@editContext" OnValidSubmit="HandleLogin">
+            <DataAnnotationsValidator />
 
-    <div>
-        <label>Nombre de usuario:</label>
-        <InputText @bind-Value="usuario" class="form-control" placeholder="Nombre de Usuario"/>
-        <ValidationMessage For="@(() => usuario)" />
+            <div class="mb-3">
+                <InputText @bind-Value="usuario" class="form-control" placeholder="Nombre de Usuario" />
+                <ValidationMessage For="@(() => usuario)" />
+            </div>
+
+            <div class="mb-3">
+                <InputText @bind-Value="contrasena" type="password" class="form-control" placeholder="Contraseña" />
+                <ValidationMessage For="@(() => contrasena)" />
+            </div>
+
+            @if (!string.IsNullOrWhiteSpace(mensaje))
+            {
+                <p class="text-success mt-3">@mensaje</p>
+            }
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary mt-2">Iniciar Sesión</button>
+            </div>
+
+            <div class="text-center mt-3">
+                <p>¿No tienes cuenta? ¡Create una!</p>
+                <button type="button" @onclick="Registrar" class="btn btn-primary mt-2">Registrar Nueva Cuenta</button>
+            </div>
+        </EditForm>
     </div>
-
-    <div>
-        <label>Contraseña:</label>
-        <InputText @bind-Value="contrasena" type="password" class="form-control" placeholder="Contraseña"/>
-        <ValidationMessage For="@(() => contrasena)" />
-    </div>
-
-    @if (!string.IsNullOrWhiteSpace(mensaje))
-    {
-        <p class="text-success mt-3">@mensaje</p>
-    }
-    
-    <button type="submit" class="btn btn-primary mt-3">Iniciar Sesión</button>
-</EditForm>
-
-<br>
-<p>¿No tienes cuenta?, no hay problema create unaaaaa:</p>
-<button type="submit" @onclick="Registrar" class="btn btn-primary mt-1">Registrar Nueva Cuenta</button>
-
+</div>
 
 @code{
     public void Registrar()

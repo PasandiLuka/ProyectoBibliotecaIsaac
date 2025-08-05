@@ -34,51 +34,55 @@
                     .ToList();
 } 
 
-<h1 class="title custom-title-padding-bottom">Libros</h1>
+<h2 class="title">Títulos de Nuestra Biblioteca</h2>
+<h5 class="title custom-title-padding-bottom">Seleccioná los libros que quieras agregar:</h5>
 
 <EditForm EditContext="@editContext" OnValidSubmit="Guardar">
     <DataAnnotationsValidator />
 
-    <table class="table table-margin">
-        <thead class="custom-padding-table">
-            <tr class="table-secondary custom-padding-table">
-                <th>Título</th>
-                <th>Genero</th>
-                <th>Autor</th>
-                <th>Editorial</th>
-                <th>FechaCreación</th>
-                <th>Paginas</th>
-                <th>Calificación</th>
-                <th>Agregar Libro</th>
-            </tr>
-        </thead>
-        <tbody>
+    <div class="tabla-responsive-wrapper">
+        <table class="tabla-estilizada">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Género</th>
+                    <th>Autor</th>
+                    <th>Editorial</th>
+                    <th>Fecha Creación</th>
+                    <th>Páginas</th>
+                    <th>Calificación</th>
+                    <th>Agregar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var list in Listas)
+                {
+                    bool isChecked = seleccionadosMap.ContainsKey(list.l.idLibro) && seleccionadosMap[list.l.idLibro];
 
-            @foreach (var list in Listas)
-            {
-                bool isChecked = seleccionadosMap.ContainsKey(list.l.idLibro) && seleccionadosMap[list.l.idLibro];
+                    <tr>
+                        <td>@list.l.titulo</td>
+                        <td>@list.g.genero</td>
+                        <td>@list.l.autor</td>
+                        <td>@list.l.editorial</td>
+                        <td>@list.l.fechaCreacion.ToShortDateString()</td>
+                        <td>@list.l.cantidadPaginas</td>
+                        <td>@list.l.calificacionPromedio</td>
+                        <td>
+                            <InputCheckbox
+                                Value="isChecked"
+                                ValueChanged="@(v => OnCheckChanged(list.l.idLibro, v))"
+                                ValueExpression="@(() => isChecked)"
+                                class="form-check-input checkbox-style" />
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
-                <tr class="table-dark custom-padding-table">
-                    <td >@list.l.titulo</td>
-                    <td>@list.g.genero</td>
-                    <td>@list.l.autor</td>
-                    <td>@list.l.editorial</td>
-                    <td>@list.l.fechaCreacion</td>
-                    <td>@list.l.cantidadPaginas</td>
-                    <td>@list.l.calificacionPromedio</td>
-                    <td><div>
-                        <InputCheckbox
-                            Value="isChecked"
-                            ValueChanged="@(v => OnCheckChanged(list.l.idLibro, v))"
-                            ValueExpression="@(() => isChecked)"
-                            class="form-check-input" />
-                    </div></td>
-                </tr>                 
-            }   
-        </tbody>
-    </table>
-
-    <button type="submit" class="btn btn-primary mt-3">Registrar</button>
+    <div class="button-align">
+        <button type="submit" class="btn btn-primary mt-4">Registrar</button>
+    </div>
 </EditForm>
 @if (!string.IsNullOrWhiteSpace(mensaje))
 {

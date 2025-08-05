@@ -9,63 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProyectoBiblioteca
 build_property.RootNamespace = ProyectoBiblioteca
-build_property.ProjectDir = /mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/
+build_property.ProjectDir = /mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca
+build_property.MSBuildProjectDirectory = /mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca
 build_property._RazorSourceGeneratorDebug = 
 
-[/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/App.razor]
+[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/Biblioteca.razor]
+[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/Biblioteca.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQmlibGlvdGVjYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/CalificacionForm.razor]
+[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/CalificacionForm.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FsaWZpY2FjaW9uRm9ybS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/GeneroForm.razor]
+[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/GeneroForm.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR2VuZXJvRm9ybS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/Index.razor]
+[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/LibroForm.razor]
+[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/LibroForm.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGlicm9Gb3JtLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/LibrosDisponibles.razor]
+[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/LibrosDisponibles.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGlicm9zRGlzcG9uaWJsZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/LoginForm.razor]
+[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/LoginForm.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5Gb3JtLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/UsuarioForm.razor]
+[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/UsuarioForm.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXN1YXJpb0Zvcm0ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Shared/MainLayout.razor]
+[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Shared/NavMenu.razor]
+[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/_Imports.razor]
+[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/_Host.cshtml]
+[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

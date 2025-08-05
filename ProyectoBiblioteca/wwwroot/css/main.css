@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: rgb(223, 105, 25);
+    background-color: #2a9fd6;
 }
 .custom-text{
     font-weight: bold;
@@ -29,12 +29,13 @@
     display: flex;
     justify-content: center;
     font-weight: bold;
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 .nav-link.btn.btn-danger{
-    background-color: rgb(160, 26, 26);
+    background-color: #c00;
     border-radius: 0.3cm;
     text-decoration: none;
+    
 }
 .nav-link.btn.btn-danger:hover{
     background-color: rgb(121, 29, 29);
@@ -50,6 +51,9 @@
     padding-bottom: 0;
 
 }
+.custom-text.weight.font-bold{
+    font-weight: bold;
+}
 .button-align{
     display: flex;
     flex-wrap: wrap;
@@ -62,4 +66,89 @@
 }
 .title.custom-title-padding-bottom{
     padding-bottom: 2rem;
+}
+.login-container {
+    height: 100vh; /* alto total pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background-color: #222  ;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+.tabla-responsive-wrapper {
+    max-width: 1100px;
+    margin: 2rem auto;
+    overflow-x: auto;
+    background: linear-gradient(135deg, #1c1c1c, #2c2c2c);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.tabla-estilizada {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e1e; /* Gris oscuro, no negro puro */
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.tabla-estilizada thead {
+    background-color: #343a40;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.tabla-estilizada th,
+.tabla-estilizada td {
+    padding: 1rem;
+    border-bottom: 1px solid #444;
+    white-space: nowrap;
+}
+
+.tabla-estilizada tbody tr:nth-child(odd) {
+    background-color: #2f2f2f;
+}
+
+.tabla-estilizada tbody tr:nth-child(even) {
+    background-color: #252525;
+}
+
+.tabla-estilizada tbody tr:hover {
+    background-color: #3a3a3a;
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+.tabla-estilizada td:first-child {
+    font-weight: 600;
+    color: #FFD700;
+}
+
+.tabla-estilizada th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.tabla-estilizada th:last-child {
+    border-top-right-radius: 12px;
+}
+
+.tabla-estilizada tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.tabla-estilizada tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
 }

@@ -3,19 +3,26 @@
 @namespace ProyectoBiblioteca.Pages
 @inherits GeneroFormBase
 
-<h2>Crear Genero</h2>
+<div class="login-container">
+    <div class="login-box">
+        <h2 class="text-center">Crear Género</h2>
 
-<EditForm EditContext="@editContext" OnValidSubmit="Guardar">
-    <DataAnnotationsValidator />
+        <EditForm EditContext="@editContext" OnValidSubmit="Guardar">
+            <DataAnnotationsValidator />
 
-    <div>
-        <label>Nombre Genero:</label>
-        <InputText @bind-Value="genero.genero" class="form-control" />
-        <ValidationMessage For="@(() => genero.genero)" />
+            <div class="mb-3">
+                <label>Nombre Género:</label>
+                <InputText @bind-Value="genero.genero" class="form-control" placeholder="Ej: Ciencia Ficción" />
+                <ValidationMessage For="@(() => genero.genero)" />
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary mt-2">Registrar</button>
+                <a href="/" class="btn btn-outline-secondary mt-2">Volver al Inicio</a>
+            </div>
+        </EditForm>
     </div>
-
-    <button type="submit" class="btn btn-primary mt-3">Registrar</button>
-</EditForm>
+</div>
 
 @if (!string.IsNullOrWhiteSpace(mensaje))
 {

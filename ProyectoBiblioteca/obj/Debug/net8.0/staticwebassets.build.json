@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pL5uRuOZXuwimRV/9lW5QdMcPSDKjbIUUJjWBVPvwbg=",
+  "Hash": "UvIs+cdxQaMy0KrYWGbHcCAqDLL7MOsCnkkyFSqyNFw=",
   "Source": "ProyectoBiblioteca",
   "BasePath": "_content/ProyectoBiblioteca",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ProyectoBiblioteca/wwwroot",
       "Source": "ProyectoBiblioteca",
-      "ContentRoot": "/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
+      "ContentRoot": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
       "BasePath": "_content/ProyectoBiblioteca",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/css/bootstrap.css",
+      "Identity": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/css/bootstrap.css",
       "SourceId": "ProyectoBiblioteca",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
+      "ContentRoot": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
       "BasePath": "_content/ProyectoBiblioteca",
       "RelativePath": "css/bootstrap.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot/css/bootstrap.css"
     },
     {
-      "Identity": "/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/css/main.css",
+      "Identity": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/css/main.css",
       "SourceId": "ProyectoBiblioteca",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/Datos/Repos/ProyectoBiblioteca/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
+      "ContentRoot": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
       "BasePath": "_content/ProyectoBiblioteca",
       "RelativePath": "css/main.css",
       "AssetKind": "All",

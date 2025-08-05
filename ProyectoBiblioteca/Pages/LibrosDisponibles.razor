@@ -23,40 +23,43 @@
                   join g in db.Generos on l.idGenero equals g.idGenero
                   select new {l, g}).ToList();
 } 
-<h1 class="title">Titulos de Nuestra Biblioteca</h1>
-<h2 class="custom-text">Listado de estos:</h2>
-<table class="table table-margin">
-        <thead class="custom-padding-table">
-            <tr class="table-secondary custom-padding-table">
-                <th class="custom-text-size">Título</th>
-                <th class="custom-text-size">Genero</th>
-                <th class="custom-text-size">Autor</th>
-                <th class="custom-text-size">Editorial</th>
-                <th class="custom-text-size">FechaCreación</th>
-                <th class="custom-text-size">Paginas</th>
-                <th class="custom-text-size">Calificación</th>
+<h2 class="title">Títulos de Nuestra Biblioteca</h2>
+<h5 class="title custom-title-padding-bottom">Listado de estos:</h5>
+
+<div class="tabla-responsive-wrapper">
+    <table class="tabla-estilizada">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Género</th>
+                <th>Autor</th>
+                <th>Editorial</th>
+                <th>Fecha Creación</th>
+                <th>Páginas</th>
+                <th>Calificación</th>
             </tr>
         </thead>
-        <tbody class="custom-padding-table">
+        <tbody>
             @foreach (var list in Listas)
             {
-                <tr class="table-dark custom-padding-table">
+                <tr>
                     <td>@list.l.titulo</td>
                     <td>@list.g.genero</td>
                     <td>@list.l.autor</td>
                     <td>@list.l.editorial</td>
-                    <td>@list.l.fechaCreacion</td>
+                    <td>@list.l.fechaCreacion.ToShortDateString()</td>
                     <td>@list.l.cantidadPaginas</td>
                     <td>@list.l.calificacionPromedio</td>        
                 </tr>                 
             }
         </tbody>
     </table>
+</div>
 
 <div>
-    <p class="custom-text weight">Quieres crear un nuevo libro</p>
+    <p class="custom-text weight font-bold">¿Quieres crear un nuevo libro?</p>
     <div class=" button-align">
-        <button class="btn btn-light custom-button" @onclick="CrearLibro">Crear un libro</button>
+        <button class="btn btn-primary custom-button" @onclick="CrearLibro">Cree un libro</button>
     </div>
     <br><br><br><br>
 </div>
