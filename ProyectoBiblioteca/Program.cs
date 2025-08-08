@@ -29,6 +29,8 @@ builder.Services.AddScoped<CalificacionService>();
 //Servicio para habilitar la variable global
 builder.Services.AddScoped<LoginState>();
 
+//Servicio para la utilización de la Api (JS Jonson una compañia familiar)
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 

@@ -9,63 +9,67 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProyectoBiblioteca
 build_property.RootNamespace = ProyectoBiblioteca
-build_property.ProjectDir = /mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/
+build_property.ProjectDir = /home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca
+build_property.MSBuildProjectDirectory = /home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca
 build_property._RazorSourceGeneratorDebug = 
 
-[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/App.razor]
+[/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/Biblioteca.razor]
+[/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/Biblioteca.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQmlibGlvdGVjYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/CalificacionForm.razor]
+[/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/CalificacionForm.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FsaWZpY2FjaW9uRm9ybS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/GeneroForm.razor]
+[/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/GeneroForm.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR2VuZXJvRm9ybS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/Index.razor]
+[/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/GoogleBook.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR29vZ2xlQm9vay5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/LibroForm.razor]
+[/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/LibroForm.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGlicm9Gb3JtLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/LibrosDisponibles.razor]
+[/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/LibrosDisponibles.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGlicm9zRGlzcG9uaWJsZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/LoginForm.razor]
+[/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/LoginForm.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5Gb3JtLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/UsuarioForm.razor]
+[/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/UsuarioForm.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXN1YXJpb0Zvcm0ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Shared/MainLayout.razor]
+[/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Shared/NavMenu.razor]
+[/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/_Imports.razor]
+[/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/_Host.cshtml]
+[/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

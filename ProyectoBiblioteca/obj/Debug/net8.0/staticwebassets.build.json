@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UvIs+cdxQaMy0KrYWGbHcCAqDLL7MOsCnkkyFSqyNFw=",
+  "Hash": "tt/424hhDyvwJ4I2OnmZT961yho75HVkJnpCbsUzjfk=",
   "Source": "ProyectoBiblioteca",
   "BasePath": "_content/ProyectoBiblioteca",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ProyectoBiblioteca/wwwroot",
       "Source": "ProyectoBiblioteca",
-      "ContentRoot": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
+      "ContentRoot": "/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
       "BasePath": "_content/ProyectoBiblioteca",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/css/bootstrap.css",
+      "Identity": "/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/css/bootstrap.css",
       "SourceId": "ProyectoBiblioteca",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
+      "ContentRoot": "/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
       "BasePath": "_content/ProyectoBiblioteca",
       "RelativePath": "css/bootstrap.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot/css/bootstrap.css"
     },
     {
-      "Identity": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/css/main.css",
+      "Identity": "/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/css/main.css",
       "SourceId": "ProyectoBiblioteca",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
+      "ContentRoot": "/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/",
       "BasePath": "_content/ProyectoBiblioteca",
       "RelativePath": "css/main.css",
       "AssetKind": "All",

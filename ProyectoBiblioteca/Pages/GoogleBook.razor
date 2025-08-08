@@ -1,0 +1,45 @@
+@page "/librosApi"
+
+@inject HttpClient Http
+
+@namespace ProyectoBiblioteca.Pages
+
+<h3>Libro desde Google Books</h3>
+
+@if (libro != null)
+{
+    <div>
+        <h4>@libro.volumeInfo.title</h4>
+        <p><b>Autor:</b> @string.Join(", ", libro.volumeInfo.authors ?? new List<string>())</p>
+        <img src="@libro.volumeInfo.imageLinks?.thumbnail" />
+        <p>@(libro.volumeInfo.description ?? "Sin descripción")</p>
+    </div>
+}
+else if (error)
+{
+    <p style="color:red">Error al cargar el libro.</p>
+}
+else
+{
+    <p>Cargando...</p>
+}
+
+@code {
+    private ProyectoBiblioteca.Models.GoogleBook libro;
+    private bool error = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            string id = "zyTCAlFPjgYC"; // ID único del libro
+            string url = $"https://www.googleapis.com/books/v1/volumes/{id}";
+
+            libro = await Http.GetFromJsonAsync<ProyectoBiblioteca.Models.GoogleBook>(url);
+        }
+        catch
+        {
+            error = true;
+        }
+    }
+}

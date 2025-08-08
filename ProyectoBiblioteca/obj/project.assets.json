@@ -2358,11 +2358,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/ProyectoBiblioteca.csproj",
+      "projectUniqueName": "/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/ProyectoBiblioteca.csproj",
       "projectName": "ProyectoBiblioteca",
-      "projectPath": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/ProyectoBiblioteca.csproj",
+      "projectPath": "/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/ProyectoBiblioteca.csproj",
       "packagesPath": "/home/et12alumno/.nuget/packages/",
-      "outputPath": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/obj/",
+      "outputPath": "/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/et12alumno/.nuget/NuGet/NuGet.Config"

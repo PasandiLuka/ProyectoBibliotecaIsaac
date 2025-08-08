@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6N0i+LetX2C8On6st4YoPX2Hy62ml1RuBjvjw8mOhlbrcNiQ4ba3tPeEWVLKJIEFpxEg0ZUwgfUhcwItzfbEmA==",
+  "dgSpecHash": "SJb/zBYNQ/+cJtYxv9Vf58VwH0I64FN9IqDxCcBqs/vbNpdl9vhpwA+TLjowQG3r7DH8jtRUyI4ZiTqaGHslQg==",
   "success": true,
-  "projectFilePath": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/ProyectoBiblioteca.csproj",
+  "projectFilePath": "/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/ProyectoBiblioteca.csproj",
   "expectedPackageFiles": [
     "/home/et12alumno/.nuget/packages/bouncycastle.cryptography/2.5.1/bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "/home/et12alumno/.nuget/packages/google.protobuf/3.30.0/google.protobuf.3.30.0.nupkg.sha512",

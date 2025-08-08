@@ -1,11 +1,11 @@
 {
   "Files": [
     {
-      "Id": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/css/bootstrap.css",
+      "Id": "/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/css/bootstrap.css",
       "PackagePath": "staticwebassets/css/bootstrap.css"
     },
     {
-      "Id": "/mnt/Datos/Repos/Test/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/css/main.css",
+      "Id": "/home/et12alumno/ProyectoBibliotecaIsaac/ProyectoBiblioteca/wwwroot/css/main.css",
       "PackagePath": "staticwebassets/css/main.css"
     },
     {
