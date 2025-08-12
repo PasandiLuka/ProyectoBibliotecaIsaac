@@ -1,18 +1,108 @@
 @page "/librosApi"
-
+@namespace ProyectoBiblioteca.Pages
 @inject HttpClient Http
 
-@namespace ProyectoBiblioteca.Pages
+<h3>Buscador Google Books</h3>
 
+<input @bind="searchQuery" placeholder="Ingrese el título o palabra clave" />
+<button @onclick="BuscarLibros">Buscar</button>
+
+@if (isLoading)
+{
+    <p>Cargando...</p>
+}
+else if (books?.Items != null && books.Items.Count > 0)
+{
+    <h3>Se encontraron @books.Items.Count libros:</h3>
+    <div class="row">
+        @foreach (var item in books.Items)
+        {
+            <div class="col-md-2  mb-3">
+                <div class="card h-100">
+                    @if (!string.IsNullOrEmpty(item.volumeInfo.imageLinks?.thumbnail))
+                    {
+                        <img src="@item.volumeInfo.imageLinks.thumbnail" class="card-img-top" alt="@item.volumeInfo.title" />
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">@item.volumeInfo.title</h5>
+                        <p class="card-text">
+                            <strong>Autor(es):</strong> @string.Join(", ", item.volumeInfo.authors ?? new List<string>())<br />
+                            <strong>Publicado:</strong> @item.volumeInfo.publishedDate
+                            <strong>CantidadDePaginas:</strong> @item.volumeInfo.pageCount
+                            <strong>Categoria:</strong> @string.Join(", ", item.volumeInfo.categories ?? new List<string>())<br />
+                        </p>
+                        <p class="card-text text-muted" style="font-size: 0.9em;">
+                            @(string.IsNullOrWhiteSpace(item.volumeInfo.description) 
+                                ? "Sin descripción" 
+                                : item.volumeInfo.description.Length > 250 
+                                    ? item.volumeInfo.description.Substring(0, 250) + "..." 
+                                    : item.volumeInfo.description)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else if (!string.IsNullOrWhiteSpace(searchQuery))
+{
+    <p>No se encontraron resultados.</p>
+}
+@code{
+
+    private string searchQuery = "";
+    private bool isLoading = false;
+    private GoogleBooksResponse? books;
+
+    private async Task BuscarLibros()
+    {
+        if (string.IsNullOrWhiteSpace(searchQuery))
+            return;
+
+        isLoading = true;
+
+        string url = $"https://www.googleapis.com/books/v1/volumes?q=intitle:{searchQuery}&maxResults=30";
+
+        try
+        {
+            books = await Http.GetFromJsonAsync<GoogleBooksResponse>(url);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al consumir la API: {ex.Message}");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}
+
+
+@* 
 <h3>Libro desde Google Books</h3>
 
-@if (libro != null)
+
+@if (libro1 != null && libro2 != null)
 {
     <div>
-        <h4>@libro.volumeInfo.title</h4>
-        <p><b>Autor:</b> @string.Join(", ", libro.volumeInfo.authors ?? new List<string>())</p>
-        <img src="@libro.volumeInfo.imageLinks?.thumbnail" />
-        <p>@(libro.volumeInfo.description ?? "Sin descripción")</p>
+        <h4>@libro1.volumeInfo.title</h4>
+        <p><b>Autor:</b> @string.Join(", ", libro1.volumeInfo.authors ?? new List<string>())</p>
+        <img src="@libro1.volumeInfo.imageLinks?.thumbnail" />
+        <p>@(libro1.volumeInfo.description ?? "Sin descripción")</p>
+    </div>
+    <div>
+        <h4>@libro2.volumeInfo.title</h4>
+        <p><b>Autor:</b> @string.Join(", ", libro2.volumeInfo.authors ?? new List<string>())</p>
+        <img src="@libro2.volumeInfo.imageLinks?.thumbnail" />
+        <p>@(libro2.volumeInfo.description ?? "Sin descripción")</p>
+    </div>
+    //Console.WriteLine("hola");
+    <div>
+        <h4>@libro3.volumeInfo.title</h4>
+        <p><b>Autor:</b> @string.Join(", ", libro3.volumeInfo.authors ?? new List<string>())</p>
+        <img src="@libro3.volumeInfo.imageLinks?.thumbnail" />
+        <p>@(libro3.volumeInfo.description ?? "Sin descripción")</p>
     </div>
 }
 else if (error)
@@ -25,7 +115,9 @@ else
 }
 
 @code {
-    private ProyectoBiblioteca.Models.GoogleBook libro;
+    private ProyectoBiblioteca.Models.GoogleBook libro1;
+    private ProyectoBiblioteca.Models.GoogleBook libro2;
+    private ProyectoBiblioteca.Models.GoogleBook libro3;
     private bool error = false;
 
     protected override async Task OnInitializedAsync()
@@ -35,7 +127,17 @@ else
             string id = "zyTCAlFPjgYC"; // ID único del libro
             string url = $"https://www.googleapis.com/books/v1/volumes/{id}";
 
-            libro = await Http.GetFromJsonAsync<ProyectoBiblioteca.Models.GoogleBook>(url);
+            libro1 = await Http.GetFromJsonAsync<ProyectoBiblioteca.Models.GoogleBook>(url);
+                
+            id = "2zgRDXFWkm8C"; // ID único del libro
+            url = $"https://www.googleapis.com/books/v1/volumes/{id}";
+
+            libro2 = await Http.GetFromJsonAsync<ProyectoBiblioteca.Models.GoogleBook>(url);
+
+            string title = " "; // ID único del libro
+            url = $"https://www.googleapis.com/books/v1/volumes?q=intitle:{title}";
+
+            libro3 = await Http.GetFromJsonAsync<ProyectoBiblioteca.Models.GoogleBook>(url);
         }
         catch
         {
@@ -43,3 +145,4 @@ else
         }
     }
 }
+ *@
