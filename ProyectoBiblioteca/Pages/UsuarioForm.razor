@@ -13,31 +13,31 @@
             <div class="mb-3">
                 <label>Nombre completo:</label>
                 <InputText @bind-Value="usuario.nombreCompleto" class="form-control" placeholder="Nombre Completo"/>
-                <ValidationMessage For="@(() => usuario.nombreCompleto)" />
+                <p class="text-danger mt-3"><ValidationMessage For="@(() => usuario.nombreCompleto)" /></p>
             </div>
 
             <div class="mb-3">
                 <label>Nombre de usuario:</label>
                 <InputText @bind-Value="usuario.nombreUsuario" class="form-control" placeholder="Nombre de Usuario"/>
-                <ValidationMessage For="@(() => usuario.nombreUsuario)" />
+                <p class="text-danger mt-3"><ValidationMessage For="@(() => usuario.nombreUsuario)" /></p>
             </div>
 
             <div class="mb-3">
                 <label>Correo electrónico:</label>
                 <InputText @bind-Value="usuario.correo" class="form-control" placeholder="Correo Electrónico"/>
-                <ValidationMessage For="@(() => usuario.correo)" />
+                <p class="text-danger mt-3"><ValidationMessage For="@(() => usuario.correo)" /></p>
             </div>
 
             <div class="mb-3">
                 <label>Contraseña:</label>
                 <InputText @bind-Value="usuario.contrasena" type="password" class="form-control" placeholder="Contraseña"/>
-                <ValidationMessage For="@(() => usuario.contrasena)" />
+                <p class="text-danger mt-3"><ValidationMessage For="@(() => usuario.contrasena)" /></p>
             </div>
 
             <div class="mb-3">
                 <label>Teléfono:</label>
                 <InputText @bind-Value="usuario.numeroTelefono" class="form-control" placeholder="Número de Teléfono"/>
-                <ValidationMessage For="@(() => usuario.numeroTelefono)" />
+                <p class="text-danger mt-3"><ValidationMessage For="@(() => usuario.numeroTelefono)" /></p>
             </div>
 
             <div class="d-grid gap-2">

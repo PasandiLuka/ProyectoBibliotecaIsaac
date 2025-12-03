@@ -3,7 +3,6 @@
 @using ProyectoBiblioteca.FormLogic
 @namespace ProyectoBiblioteca.Pages
 @inherits LoginFormBase
-@inject NavigationManager NavigationManager
 
 <div class="login-container">
     <div class="login-box">
@@ -24,7 +23,7 @@
 
             @if (!string.IsNullOrWhiteSpace(mensaje))
             {
-                <p class="text-success mt-3">@mensaje</p>
+                <p class="text-danger mt-3">@mensaje</p>
             }
 
             <div class="d-grid">

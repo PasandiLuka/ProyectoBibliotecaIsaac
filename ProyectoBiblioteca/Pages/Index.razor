@@ -4,17 +4,22 @@
 @using System.Linq;
 @using System.Threading.Tasks;
 
+@using Microsoft.AspNetCore.Mvc
 @using Microsoft.Extensions.Configuration;
 @using Microsoft.EntityFrameworkCore;
 @using ProyectoBiblioteca.Data
 @using ProyectoBiblioteca.Data.Configs
 @using ProyectoBiblioteca.Models
-
+@inject NavigationManager nv
 @inject LoginState ls
+@if(ls.UsuarioActual is null || ls.UsuarioActual == 0)
+{
+    nv.NavigateTo("/");
+}
 
 @inject IDbContextFactory<ProyectoBibliotecaDbContext> DbFactory
-@*using var db = DbFactory.CreateDbContext();
-*@
+
+
 
 @{
     using var db = DbFactory.CreateDbContext();
@@ -23,7 +28,7 @@
                   join g in db.Generos on l.idGenero equals g.idGenero 
                   join u in db.Usuarios on b.idUsuario equals u.idUsuario
                   where u.idUsuario == ls.UsuarioActual
-                  select new {l, g}).ToList();
+                  select new {l, g}).ToList();  
 } 
 
 <!DOCTYPE html>
@@ -47,7 +52,6 @@
                 <th>Editorial</th>
                 <th>Fecha Creación</th>
                 <th>Páginas</th>
-                <th>Calificación</th>
             </tr>
         </thead>
         <tbody>
@@ -59,8 +63,7 @@
                     <td>@list.l.autor</td>
                     <td>@list.l.editorial</td>
                     <td>@list.l.fechaCreacion.ToShortDateString()</td>
-                    <td>@list.l.cantidadPaginas</td>
-                    <td>@list.l.calificacionPromedio</td>        
+                    <td>@list.l.cantidadPaginas</td>    
                 </tr>                 
             }
         </tbody>

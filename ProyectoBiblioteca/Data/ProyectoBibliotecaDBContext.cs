@@ -21,7 +21,6 @@ namespace ProyectoBiblioteca.Data
                   : base(options) {}
 
             public DbSet<Usuario> Usuarios { get; set; }
-            public DbSet<Calificacion> Calificaciones { get; set; }
             public DbSet<Libro> Libros { get; set; }
             public DbSet<Genero> Generos { get; set; }
             public DbSet<Biblioteca> Bibliotecas { get; set; }

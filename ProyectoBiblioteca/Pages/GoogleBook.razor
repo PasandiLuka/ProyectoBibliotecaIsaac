@@ -1,5 +1,11 @@
 @page "/librosApi"
 @namespace ProyectoBiblioteca.Pages
+@inject NavigationManager nv
+@inject LoginState ls
+@if(ls.UsuarioActual is null || ls.UsuarioActual == 0)
+{
+    nv.NavigateTo("/");
+}
 @inject HttpClient Http
 
 <h3>Buscador Google Books</h3>

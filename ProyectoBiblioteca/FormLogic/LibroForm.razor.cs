@@ -42,6 +42,7 @@ public class LibroFormBase : ComponentBase
     {
         using var db = DbFactory.CreateDbContext();
         if (!editContext.Validate()) return;
+        libro.fechaCreacion = DateTime.Now;
         db.Libros.Add(libro);
         db.SaveChanges();
         libro = new Libro();

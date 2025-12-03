@@ -14,6 +14,13 @@
 @namespace ProyectoBiblioteca.Pages
 @inherits LibroFormBase
 
+@inject NavigationManager nv
+@inject LoginState ls
+@if(ls.UsuarioActual is null || ls.UsuarioActual == 0)
+{
+    nv.NavigateTo("/");
+}
+
 @inject IDbContextFactory<ProyectoBibliotecaDbContext> DbFactory
 @*using var db = DbFactory.CreateDbContext();
 *@
@@ -31,7 +38,7 @@
     <div>
         <label>Titulo:</label>
         <InputText @bind-Value="libro.titulo" class="form-control" placeholder="Titulo del libro"/>
-        <ValidationMessage For="@(() => libro.titulo)" />
+        <p class="text-danger mt-3"> <ValidationMessage For="@(() => libro.titulo)" /> </p>
     </div>
 
     <div>
@@ -43,31 +50,25 @@
                 <option value="@g.idGenero">@g.genero</option>
             }
         </InputSelect>
-        <ValidationMessage For="@(() => libro.idGenero)" />
+        <p class="text-danger mt-3"><ValidationMessage For="@(() => libro.idGenero)" /></p>
     </div>
 
     <div>
         <label>Editorial:</label>
-        <InputText @bind-Value="libro.editorial" class="form-control" placeholder="Editorial del libro"/>
-        <ValidationMessage For="@(() => libro.editorial)" />
-    </div>
-
-    <div>
-        <label>Editorial:</label>
-        <InputText @bind-Value="libro.editorial" class="form-control" placeholder="Editorial del libro"/>
-        <ValidationMessage For="@(() => libro.editorial)" />
+        <InputText @bind-Value="libro.editorial" class="form-control " placeholder="Editorial del libro"/>
+        <p class="text-danger mt-3"><ValidationMessage For="@(() => libro.editorial)" /></p>
     </div>
 
     <div>
         <label>Autor:</label>
         <InputText @bind-Value="libro.autor" class="form-control" placeholder="Autor del libro"/>
-        <ValidationMessage For="@(() => libro.autor)" />
+        <p class="text-danger mt-3"><ValidationMessage For="@(() => libro.autor)" /></p>
     </div>
 
     <div>
         <label>Cantidad Páginas:</label>
         <InputNumber TValue="int" @bind-Value="libro.cantidadPaginas" class="form-control" placeholder="Cantidad de paginas del libro"/>
-        <ValidationMessage For="@(() => libro.cantidadPaginas)" />
+        <p class="text-danger mt-3"> <ValidationMessage For="@(() => libro.cantidadPaginas)" /></p>
     </div>
 
     <button type="submit" class="btn btn-primary mt-3">Registrar</button>

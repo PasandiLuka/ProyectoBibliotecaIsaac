@@ -12,7 +12,12 @@
 
 @inherits BibliotecaFormBase
 
-@inject LoginState ls
+
+@inject NavigationManager nv
+@if(ls.UsuarioActual is null || ls.UsuarioActual == 0)
+{
+    nv.NavigateTo("/");
+}
 
 @inject IDbContextFactory<ProyectoBibliotecaDbContext> DbFactory
 @*using var db = DbFactory.CreateDbContext();
@@ -50,7 +55,6 @@
                     <th>Editorial</th>
                     <th>Fecha Creación</th>
                     <th>Páginas</th>
-                    <th>Calificación</th>
                     <th>Agregar</th>
                 </tr>
             </thead>
@@ -66,7 +70,6 @@
                         <td>@list.l.editorial</td>
                         <td>@list.l.fechaCreacion.ToShortDateString()</td>
                         <td>@list.l.cantidadPaginas</td>
-                        <td>@list.l.calificacionPromedio</td>
                         <td>
                             <InputCheckbox
                                 Value="isChecked"

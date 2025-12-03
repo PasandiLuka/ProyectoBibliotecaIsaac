@@ -3,11 +3,6 @@
 
 <br>
 
-# ¡¡¡ACLARACIÓN!!! 
-## (Todos los cambios que realice en la aplicación desde los formularios se borrara al ejecutar de vuelta el proyecto, solo se mantienen los cambios realizados manualmente en el código)
-
-<br>
-
 # Configuración Inicial
 ## Recuerda crear tu archivo appsettings.json en la raiz del proyecto.
 
@@ -37,9 +32,6 @@
 - ### Nombre Usuario: LUKITA7956    Contraseña: luka1234
 - ### Nombre Usuario: SEBITA7956    Contraseña: seba1234
 
-<br>
-
-## Si utilizas Windows, puedes ejecutar el archivo .bat, el cual iniciara la aplicación automaticamente (creo..)
 
 <br><br>
 

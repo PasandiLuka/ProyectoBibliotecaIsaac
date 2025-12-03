@@ -3,6 +3,13 @@
 @namespace ProyectoBiblioteca.Pages
 @inherits GeneroFormBase
 
+@inject NavigationManager nv
+@inject LoginState ls
+@if(ls.UsuarioActual is null || ls.UsuarioActual == 0)
+{
+    nv.NavigateTo("/");
+}
+
 <div class="login-container">
     <div class="login-box">
         <h2 class="text-center">Crear Género</h2>

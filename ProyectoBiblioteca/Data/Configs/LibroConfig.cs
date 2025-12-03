@@ -51,9 +51,6 @@ namespace ProyectoBiblioteca.Data.Configs
                      builder.Property(l => l.cantidadPaginas)
                             .HasColumnType("int")
                             .IsRequired();
-
-                     builder.Property(l => l.calificacionPromedio)
-                            .HasColumnType("decimal");
         }
     }
 }

@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/ProyectoBiblioteca.props" />
-</Project>

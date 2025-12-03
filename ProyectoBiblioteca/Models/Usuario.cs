@@ -34,9 +34,6 @@ namespace ProyectoBiblioteca.Models // Cambiá WebBase por tu espacio de nombres
         [Phone(ErrorMessage = "Número de teléfono inválido.")]
         [StringLength(45)]
         public string numeroTelefono { get; set; } = string.Empty;
-        
-
-        public ICollection<Calificacion> calificaciones { get; set; }
 
 
         public Usuario() { }
