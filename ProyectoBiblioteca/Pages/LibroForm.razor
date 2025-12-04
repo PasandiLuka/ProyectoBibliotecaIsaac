@@ -44,7 +44,7 @@
     <div>
         <label>Género:</label>
         <InputSelect @bind-Value="libro.idGenero">
-            <option value="">-- Elige uno --</option>
+            <option value="">-- Elige El Genero --</option>
             @foreach (var g in Lista)
             {
                 <option value="@g.idGenero">@g.genero</option>
@@ -70,6 +70,10 @@
         <InputNumber TValue="int" @bind-Value="libro.cantidadPaginas" class="form-control" placeholder="Cantidad de paginas del libro"/>
         <p class="text-danger mt-3"> <ValidationMessage For="@(() => libro.cantidadPaginas)" /></p>
     </div>
+    @if (!string.IsNullOrEmpty(mensaje))
+    {
+        <div class="text-success mt-1">@mensaje</div>
+    }
 
     <button type="submit" class="btn btn-primary mt-3">Registrar</button>
 </EditForm>

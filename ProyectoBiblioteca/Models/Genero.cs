@@ -7,7 +7,8 @@ namespace ProyectoBiblioteca.Models
 {
     public class Genero
     {
-        public int idGenero { get; set; }
+        [Required(ErrorMessage = "El genero es obligatorio.")]
+        public int? idGenero { get; set; }
 
 
         [Required(ErrorMessage = "El genero es obligatorio.")]

@@ -23,24 +23,26 @@
 @*using var db = DbFactory.CreateDbContext();
 *@
 
+
 @{
-    using var db = DbFactory.CreateDbContext();
-    var Listas = db.Libros
-                    .GroupJoin(
-                        db.Bibliotecas.Where(b => b.idUsuario == ls.UsuarioActual),
-                        l => l.idLibro,
-                        b => b.idLibro,
-                        (l, grp) => new { Libro = l, Bibliotecas = grp })
-                    .SelectMany(
-                        x => x.Bibliotecas.DefaultIfEmpty(),
-                        (x, bnull) => new { Libro = x.Libro, Biblioteca = bnull })
-                    .Where(x => x.Biblioteca == null)
-                    .Select(x => new { l = x.Libro, g = x.Libro.genero })
-                    .ToList();
-} 
+    var Listas = FiltrarTitulo();
+}
 
 <h2 class="title">Títulos de Nuestra Biblioteca</h2>
 <h5 class="title custom-title-padding-bottom">Seleccioná los libros que quieras agregar:</h5>
+
+<div class="filtros-wrapper">
+    <div class="content-end">
+        <input class="form-control w-25 me-sm-2" type="search"
+               placeholder="Ingrese un titulo para filtrar" @bind-value="titulo">
+
+        <button class="btn btn-primary my-2 my-sm-0" type="submit" @onclick="Filtrar">
+            Buscar
+        </button>
+    </div>
+</div>
+
+
 
 <EditForm EditContext="@editContext" OnValidSubmit="Guardar">
     <DataAnnotationsValidator />
@@ -92,3 +94,50 @@
     <p class="text-warning mt-3">@mensaje</p>
 }
 <br><br><br><br>
+
+
+@code{
+    string titulo = string.Empty;
+    public void Filtrar()
+    {
+        StateHasChanged();
+    }
+    public List<(Genero g, Libro l)> FiltrarTitulo()
+    {
+        using var db = DbFactory.CreateDbContext();
+
+        if (!string.IsNullOrEmpty(titulo))
+        {
+
+        string filtro = titulo.ToLower();
+
+        var query = (
+                from l in db.Libros
+                join g in db.Generos on l.idGenero equals g.idGenero
+                where l.titulo.ToLower().Contains(filtro)   // búsqueda parcial
+                select new { g, l }
+            )
+            .AsEnumerable()
+            .Select(x => (x.g, x.l))
+            .ToList();
+
+        return query;
+            
+        }
+        else
+        {
+            var query = (
+                from l in db.Libros
+                join g in db.Generos on l.idGenero equals g.idGenero
+                select new { g, l }
+            )
+            .AsEnumerable()
+            .Select(x => (x.g, x.l))
+            .ToList();
+
+            return query;
+        }
+    }
+
+
+}

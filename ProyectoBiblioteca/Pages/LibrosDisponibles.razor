@@ -28,13 +28,16 @@
 }
 
 <h2 class="title">Títulos de Nuestra Biblioteca</h2>
-<h4>Filtrar libros por Titulo</h4>
 
-<input class="form-control w-25 me-sm-2" type="search" placeholder="ingrese un titulo" @bind-value="titulo">
-<button class="btn btn-secondary my-2 my-sm-0" type="submit" @onclick="Filtrar">Buscar</button>
+<div class="filtros-wrapper">
+    <div class="content-end">
+        <input class="form-control w-25 me-sm-2" type="search" placeholder="Ingrese un titulo para filtrar" @bind-value="titulo">
+        <button class="btn btn-primary my-2 my-sm-0" type="submit" @onclick="Filtrar">Buscar</button>
+    </div>
+</div>
 
 <br>
-<h5 class="title custom-title-padding-bottom">Listado de estos:</h5>
+
 
 <div class="tabla-responsive-wrapper">
     <table class="tabla-estilizada">
@@ -76,25 +79,28 @@
     {
         using var db = DbFactory.CreateDbContext();
 
-        if (string.IsNullOrEmpty(titulo))
+        if (!string.IsNullOrEmpty(titulo))
         {
-            // EF ejecuta el query usando tipos anónimos
-            var query = (
+
+        string filtro = titulo.ToLower();
+
+        var query = (
                 from l in db.Libros
                 join g in db.Generos on l.idGenero equals g.idGenero
+                where l.titulo.ToLower().Contains(filtro)   // búsqueda parcial
                 select new { g, l }
             )
-            .AsEnumerable()      // A partir de acá ya no es árbol de expresión
-            .Select(x => (x.g, x.l))   // Ahora sí puedo usar tuplas
+            .AsEnumerable()
+            .Select(x => (x.g, x.l))
             .ToList();
 
-            return query;
+        return query;
+            
         }
         else
         {
             var query = (
                 from l in db.Libros
-                where titulo == l.titulo
                 join g in db.Generos on l.idGenero equals g.idGenero
                 select new { g, l }
             )

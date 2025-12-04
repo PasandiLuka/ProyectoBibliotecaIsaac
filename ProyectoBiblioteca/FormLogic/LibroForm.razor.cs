@@ -16,6 +16,7 @@ public class LibroFormBase : ComponentBase
     //using var db = DbFactory.CreateDbContext();
     protected Libro libro = new();
     protected EditContext editContext = null!;
+    protected string mensaje = string.Empty;
 
     protected override void OnInitialized()
     {
@@ -45,8 +46,8 @@ public class LibroFormBase : ComponentBase
         libro.fechaCreacion = DateTime.Now;
         db.Libros.Add(libro);
         db.SaveChanges();
+        mensaje = "Libro Creado con Exito";
         libro = new Libro();
-        OnInitialized();
         NavigationManager.NavigateTo("/libro");
     }
 }

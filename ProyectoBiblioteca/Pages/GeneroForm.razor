@@ -21,6 +21,10 @@
                 <label>Nombre Género:</label>
                 <InputText @bind-Value="genero.genero" class="form-control" placeholder="Ej: Ciencia Ficción" />
                 <ValidationMessage For="@(() => genero.genero)" />
+                @if (!string.IsNullOrEmpty(mensaje))
+                {
+                    <div class="text-success mt-1">@mensaje</div>
+                }
             </div>
 
             <div class="d-grid gap-2">
