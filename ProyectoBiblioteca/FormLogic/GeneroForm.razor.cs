@@ -45,7 +45,7 @@ public class GeneroFormBase : ComponentBase
 
         db.Generos.Add(genero);
         db.SaveChanges();
-        mensaje = "Genero registrado correctamente.";
+        mensaje = "Genero registrado correctamente.";<
         genero = new Genero();
     }
 }

@@ -106,38 +106,41 @@
     {
         using var db = DbFactory.CreateDbContext();
 
+        // ID del usuario actual (como en tu ejemplo original)
+        int? usuarioId = ls.UsuarioActual;
+
+        // Query base con GroupJoin para excluir libros ya en la biblioteca del usuario
+        var queryBase =
+            db.Libros
+            .GroupJoin(
+                db.Bibliotecas.Where(b => b.idUsuario == usuarioId),
+                l => l.idLibro,
+                b => b.idLibro,
+                (l, grp) => new { Libro = l, Bibliotecas = grp }
+            )
+            .SelectMany(
+                x => x.Bibliotecas.DefaultIfEmpty(),
+                (x, bnull) => new { Libro = x.Libro, Biblioteca = bnull }
+            )
+            .Where(x => x.Biblioteca == null)          // EXCLUYE libros existentes en su biblioteca
+            .Join(
+                db.Generos,
+                x => x.Libro.idGenero,
+                g => g.idGenero,
+                (x, g) => new { g, l = x.Libro }
+            );
+
+        // FILTRO POR TÍTULO
         if (!string.IsNullOrEmpty(titulo))
         {
+            string filtro = titulo.ToLower();
+            queryBase = queryBase.Where(x => x.l.titulo.ToLower().Contains(filtro));
+        }
 
-        string filtro = titulo.ToLower();
-
-        var query = (
-                from l in db.Libros
-                join g in db.Generos on l.idGenero equals g.idGenero
-                where l.titulo.ToLower().Contains(filtro)   // búsqueda parcial
-                select new { g, l }
-            )
+        // Conversión al tipo requerido
+        return queryBase
             .AsEnumerable()
             .Select(x => (x.g, x.l))
             .ToList();
-
-        return query;
-            
-        }
-        else
-        {
-            var query = (
-                from l in db.Libros
-                join g in db.Generos on l.idGenero equals g.idGenero
-                select new { g, l }
-            )
-            .AsEnumerable()
-            .Select(x => (x.g, x.l))
-            .ToList();
-
-            return query;
-        }
     }
-
-
 }
