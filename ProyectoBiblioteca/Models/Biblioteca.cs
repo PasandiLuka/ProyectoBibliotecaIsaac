@@ -1,13 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.AspNetCore.Components;
-using Org.BouncyCastle.Asn1.Icao;
-
 namespace ProyectoBiblioteca.Models;
 
 public class Biblioteca
@@ -19,7 +9,3 @@ public class Biblioteca
 
     public Usuario Usuarios { get; set; }
 }
-
-/* 
-    HOLA
- */

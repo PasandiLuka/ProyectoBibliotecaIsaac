@@ -1,11 +1,5 @@
 namespace ProyectoBiblioteca.Models;
 
-/* public class GoogleBook
-{
-    public string id { get; set; }
-    public VolumeInfo volumeInfo { get; set; }
-} */
-
 public class GoogleBooksResponse
 {
     public List<Item> Items { get; set; }
